@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nightclub 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="esquema.xsd">
+    
+    <nombre>La Noche Exclusive</nombre>
+    
+    <servicios>
+        <servicio id="S01">
+            <tipo>VIP Lounge</tipo>
+            <precio moneda="EUR">150.00</precio>
+            <disponible>true</disponible>
+        </servicio>
+        <servicio id="S02">
+            <tipo>Mixología</tipo>
+            <precio moneda="EUR">15.50</precio>
+            <disponible>true</disponible>
+        </servicio>
+    </servicios>
+
+    <eventos>
+        <evento>
+            <titulo>Neon Night</titulo>
+            <fecha>2026-05-20</fecha>
+            <capacidad_max>500</capacidad_max>
+        </evento>
+    </eventos>
+</nightclub>
