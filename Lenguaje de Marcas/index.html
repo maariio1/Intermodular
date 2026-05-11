@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logoprotex.JPG" alt="Logo">
+        </div>
+        
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-nosotros">Sobre Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="hero-content">
+            <h1>LA NOCHE <br><span class="red-text">ES NUESTRA</span></h1>
+            <p class="subtitle">Vive la experiencia más exclusiva de la ciudad.</p>
+            <a href="#" class="btn">RESERVAR MESA</a>
+        </div>
+    </header>
+
+    <section id="sobre-nosotros" class="about">
+        <h2>SOBRE <span class="red-text">NOSOTROS</span></h2>
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <p>Somos el epicentro del entretenimiento nocturno, combinando los mejores DJ sets con un ambiente sofisticado y tecnología de vanguardia.</p>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>NUESTROS <span class="red-text">SERVICIOS</span></h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div class="card">
+                <h3 class="red-text">VIP Lounge</h3>
+                <p>Atención personalizada y las mejores vistas del club.</p>
+            </div>
+            <div class="card">
+                <h3 class="red-text">Eventos Privados</h3>
+                <p>Celebra tus momentos especiales con nosotros.</p>
+            </div>
+            <div class="card">
+                <h3 class="red-text">Mixología</h3>
+                <p>Cócteles de autor preparados por expertos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+    <h2>RESERVA TU <span class="red-text">MESA</span></h2>
+    <div class="contact-container">
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <select>
+                <option value="">Tipo de reserva</option>
+                <option value="vip">Mesa VIP</option>
+                <option value="pista">Pista principal</option>
+                <option value="evento">Evento privado</option>
+            </select>
+            <textarea placeholder="Mensaje o requerimientos especiales" rows="5"></textarea>
+            <button type="submit" class="btn">ENVIAR SOLICITUD</button>
+        </form>
+    </div>
+</section>
+
+    <footer>
+        <img src="img/logoprotex.JPG" alt="Logo Footer" class="logo-footer">
+        <p>&copy; 2026 Nightclub Experience. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

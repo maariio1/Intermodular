@@ -1,28 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nightclub 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="esquema.xsd">
-    
-    <nombre>La Noche Exclusive</nombre>
-    
-    <servicios>
-        <servicio id="S01">
-            <tipo>VIP Lounge</tipo>
-            <precio moneda="EUR">150.00</precio>
-            <disponible>true</disponible>
-        </servicio>
-        <servicio id="S02">
-            <tipo>Mixología</tipo>
-            <precio moneda="EUR">15.50</precio>
-            <disponible>true</disponible>
-        </servicio>
-    </servicios>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <eventos>
-        <evento>
-            <titulo>Neon Night</titulo>
-            <fecha>2026-05-20</fecha>
-            <capacidad_max>500</capacidad_max>
-        </evento>
-    </eventos>
-</nightclub>
+    <xs:element name="nightclub">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                
+                <xs:element name="servicios">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="servicio" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tipo" type="xs:string"/>
+                                        <xs:element name="precio">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:decimal">
+                                                        <xs:attribute name="moneda" type="xs:string" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="disponible" type="xs:boolean"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="eventos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="evento" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titulo" type="xs:string"/>
+                                        <xs:element name="fecha" type="xs:date"/>
+                                        <xs:element name="capacidad_max" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
